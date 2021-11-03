@@ -1,2 +1,4 @@
 # config
 config.php
+#plugin's folder Git History (vsc)
+.history/
