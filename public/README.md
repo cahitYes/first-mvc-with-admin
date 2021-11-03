@@ -1,0 +1,3 @@
+# Public
+
+c'est le seul dossier qui sera accessible a l'utilisateur de votre site, c'est ici que l'on mettra le controleur frontal, ainsi que les dossiers publiques tels que `css`, `js`, `img` etc...
