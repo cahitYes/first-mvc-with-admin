@@ -1,29 +1,7 @@
-# Affichez tous les champs de la table thearticle
-SELECT * FROM thearticle;
-# Affichez tous les champs de la table thearticle_has_thesection
-
-# Affichez tous les champs de la table theright
-
-# Affichez tous les champs de la table thesection
-
-# Affichez tous les champs de la table theuser
-
-# Affichez tous les champs de la table thearticle en y joignant 
-# obligatoirement les champs theuserName et theuserLogin de la table
-# theuser
-
-# Affichez tous les champs de la table thearticle en y joignant 
-# facultativement les champs idthesection et thesectionTitle de 
-# la table thesection (2 lignes de résultats)
-
-# Affichez tous les champs de la table thearticle en y joignant 
-# facultativement les champs idthesection et thesectionTitle de 
-# la table thesection mais sur une ligne, en concaténant idthesection
-# avec une "," et thesectionTitle avec "|||"
-
-# Affichez tous les champs de la table thearticle en y joignant 
-# obligatoirement les champs theuserName et theuserLogin de la table
-# theuser et
-# facultativement les champs idthesection et thesectionTitle de 
-# la table thesection mais sur une ligne, en concaténant idthesection
-# avec une "," et thesectionTitle avec "|||"
+select * from thearticle;
+select * from thearticle_has_thesection;
+select * from theright;
+select * from thesection;
+select * from theuser;
+select thearticle.idthearticle, thearticle.thearticletitle, thearticle.thearticleText, thearticle.thearticleDate, thearticle.thearticlestatus, thearticle.theuser_idtheuser, theuser.theusername, theuser.theuserLogin FROM thearticle inner join theuser;
+select thearticle.idthearticle, thearticle.thearticletitle, thearticle.thearticleText, thearticle.thearticleDate, thearticle.thearticlestatus, thearticle.theuser_idtheuser, thesection.idthesection, thesection.thesectiontitle from thearticle left join thearticle_has_thesection on thearticle.idthearticle = thearticle_has_thesection.thearticle_idthearticle left join thesection on thesection.idthesection = thearticle_has_thesection.thesection_idthesection ;
