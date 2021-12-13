@@ -62,16 +62,16 @@ if (isset($_GET['idsection']) && ctype_digit($_GET['idsection']) && !empty($_GET
 
     // conversion en integer
     $iduser = (int) $_GET['iduser'];
-
+    $recupUser = theuserSelectOneById($dbConnect,$iduser);
     // à commenter
-    echo "id de l'utilisateur : " . $iduser;
+    // echo "id de l'utilisateur : " . $iduser;
 
     /*
     EXERCICE
 
     */
 
-
+    include_once "../view/publicView/userView.php";
 
 
     // sinon on est sur l'accueil

@@ -17,7 +17,10 @@ $begin = microtime(true);
     - création du modèle dans /model/theuserModel.php
     - appel de ce modèle dans index.php (require_once)
     - création d'une vue dans /view/publicView/userView.php
-    - modification de /controller/publicController.php au niveau du commentaire " // si on a cliqué sur le détail d'un utilisateur" ligne ~=61 pour charger 2 fonctions puis la vue "/view/publicView/userView.php"
+    - modification de /controller/publicController.php au niveau du commentaire
+     " // si on a cliqué sur le détail d'un utilisateur" ligne ~=61 pour
+      charger 2 fonctions puis la vue "/view/publicView/userView.php"
+      
     - création d'une fonction dans /model/theuserModel.php nommée 
     
     theuserSelectOneById(mysqli $db, int $id): ?array {}
@@ -48,7 +51,8 @@ require_once "../config.php";
 require_once "../model/thearticleModel.php";
 // chargement du modèle de thesection
 require_once "../model/thesectionModel.php";
-
+// chargement du modele theuserModel
+require_once "../model/theuserModel.php";
 // connexion à la DB
 $dbConnect = mysqli_connect(DB_HOST, DB_LOGIN, DB_PWD, DB_NAME, DB_PORT);
 mysqli_set_charset($dbConnect, DB_ENCODE);
